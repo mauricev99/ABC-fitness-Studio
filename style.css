@@ -1,0 +1,107 @@
+body {
+  font-family: sans-serif;
+  background-color: #d3d3d3;
+  margin: 0;
+  padding: 0;
+  color: #001f3f;
+}
+
+.site-header {
+  background-color: #001f3f;
+  color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo {
+  height: 50px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 0;
+  margin: 15px 0 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: #d3d3d3;
+  font-weight: bold;
+}
+
+main {
+  max-width: 1000px;
+  margin: auto;
+  padding: 20px;
+  background-color: white;
+}
+
+.hero, .promo {
+  background-color: #d3d3d3;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.categories h3,
+.perks h3,
+.promo h3,
+.testimonial h3 {
+  color: #20458e;
+}
+
+.perks {
+  background-color: #f9f9f9;
+  border-left: 6px solid #20458e;
+  padding: 15px;
+}
+
+button {
+  background-color: #155ebc;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #634e99;
+}
+
+footer {
+  background-color: #001f3f;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+.footer-links a {
+  color: #d3d3d3;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+/* Responsive adjustments */
+@media (min-width: 768px) {
+  .site-header {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+
+
+}
+

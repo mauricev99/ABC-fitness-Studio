@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Gallery – ABC Fitness Studio</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .logo {
+      height: 50px;
+      background: #fff;
+      padding: 4px;
+      border-radius: 4px;
+    }
+    .gallery-page {
+      max-width: 1100px;
+      margin: auto;
+      padding: 20px;
+    }
+    .product-grid {
+      display: grid;
+      gap: 25px;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+    .product {
+      background: #f9f9f9;
+      padding: 15px;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 0 10px rgba(0,0,0,.1);
+    }
+    .product img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 6px;
+    }
+    .product h3 { color:#20458e; margin:10px 0 5px; }
+  </style>
+</head>
+<body>
+  <!-- ── header ────────────────────── -->
+  <header class="site-header">
+    <div class="brand">
+  <a href="index.html">
+    <img src="images/logo.png" alt="ABC Fitness Studio Logo" class="logo" />
+  </a>
+  <h1>ABC Fitness Studio</h1>
+</div>
+
+
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="testimonials.html">Testimonials</a></li>
+      </ul>
+    </nav>
+
+    <!-- view cart button -->
+    <button id="view-cart">View Cart</button>
+  </header>
+
+  <!-- ── main content ───────────────── -->
+  <main class="gallery-page">
+    <h2>Our Products &amp; Services</h2>
+
+    <section class="product-grid">
+      <div class="product">
+        <img src="images/gallery_shirt.jpg.png" alt="ABC Branded T-Shirt">
+        <h3>ABC Branded T-Shirt</h3>
+        <p>Stay fit and stylish in our branded tee.</p>
+        <button onclick="addToCart('ABC T-Shirt')">Add to Cart</button>
+      </div>
+
+      <div class="product">
+        <img src="images/gallery_waterbottle.jpg.png" alt="Water Bottle">
+        <h3>Branded Water Bottle</h3>
+        <p>Stay hydrated in style, grab our custom bottle today.</p>
+        <button onclick="addToCart('Water Bottle')">Add to Cart</button>
+      </div>
+
+      <div class="product">
+        <img src="images/gallery_yogamat.jpg.png" alt="Yoga Mat">
+        <h3>Yoga Mat</h3>
+        <p>Comfortable, non-slip mat for any floor routine.</p>
+        <button onclick="addToCart('Yoga Mat')">Add to Cart</button>
+      </div>
+
+      <div class="product">
+        <img src="images/gallery_yoga.jpg.png" alt="Yoga Class">
+        <h3>Yoga Class</h3>
+        <p>Relaxing sessions led by certified pros.</p>
+        <button onclick="addToCart('Yoga Class')">Add to Cart</button>
+      </div>
+
+      <div class="product">
+        <img src="images/gallery_Zumba.jpg.png" alt="Zumba">
+        <h3>Zumba</h3>
+        <p>High-energy sessions to punch stress away.</p>
+        <button onclick="addToCart('Kickboxing')">Add to Cart</button>
+      </div>
+
+      <div class="product">
+        <img src="images/gallery_pilatest.jpg.png" alt="Pilates">
+        <h3>Pilates</h3>
+        <p>Build core strength and flexibility.</p>
+        <button onclick="addToCart('Pilates')">Add to Cart</button>
+      </div>
+    </section>
+  </main>
+
+  <!-- ── cart modal (hidden by default) ── -->
+  <div id="cart-modal" class="modal hidden">
+    <div class="modal-content">
+      <h3>Your Cart</h3>
+      <ul id="cart-items"></ul>
+      <button onclick="clearCart()">Clear Cart</button>
+      <button onclick="processOrder()">Process Order</button>
+    </div>
+  </div>
+
+  <!-- ── footer ──────────────────────── -->
+  <footer>
+    <form id="newsletter">
+      <label for="email">Subscribe to our newsletter:</label>
+      <input type="email" id="email" required>
+      <button type="submit">Subscribe</button>
+    </form>
+
+    <div class="footer-links">
+      <a href="#">Facebook</a>
+      <a href="#">Instagram</a>
+      <a href="#">Contact</a>
+      <a href="index.html">Home</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="about.html">About Us</a>
+      <a href="testimonials.html">Testimonials</a>
+    </div>
+  </footer>
+
+  <!-- main JS -->
+  <script src="script.js"></script>
+</body>
+</html>
